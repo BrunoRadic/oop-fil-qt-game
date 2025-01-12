@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget"/>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>24</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menu_xml_version_1_0_encoding_UTF_8_ui_version_4_0_class_MainWindow_class_widget_class_QMainWindow_name_MainWindow_property_name_geometry_rect_x_0_x_y_0_y_width_800_width_height_600_height_rect_property_property_name_windowTitle_string_MainWindow_string_property_widget_class_QWidget_name_centralwidget_widget_class_QMenuBar_name_menubar_widget_class_QStatusBar_name_statusbar_widget_ui">
+    <property name="title">
+     <string>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;ui version=&quot;4.0&quot;&gt;
+ &lt;class&gt;MainWindow&lt;/class&gt;
+ &lt;widget class=&quot;QMainWindow&quot; name=&quot;MainWindow&quot;&gt;
+  &lt;property name=&quot;geometry&quot;&gt;
+   &lt;rect&gt;
+    &lt;x&gt;0&lt;/x&gt;
+    &lt;y&gt;0&lt;/y&gt;
+    &lt;width&gt;800&lt;/width&gt;
+    &lt;height&gt;600&lt;/height&gt;
+   &lt;/rect&gt;
+  &lt;/property&gt;
+  &lt;property name=&quot;windowTitle&quot;&gt;
+   &lt;string&gt;MainWindow&lt;/string&gt;
+  &lt;/property&gt;
+  &lt;widget class=&quot;QWidget&quot; name=&quot;centralwidget&quot;/&gt;
+  &lt;widget class=&quot;QMenuBar&quot; name=&quot;menubar&quot;/&gt;
+  &lt;widget class=&quot;QStatusBar&quot; name=&quot;statusbar&quot;/&gt;
+ &lt;/widget&gt;
+&lt;/ui&gt;</string>
+    </property>
+   </widget>
+   <addaction name="menu_xml_version_1_0_encoding_UTF_8_ui_version_4_0_class_MainWindow_class_widget_class_QMainWindow_name_MainWindow_property_name_geometry_rect_x_0_x_y_0_y_width_800_width_height_600_height_rect_property_property_name_windowTitle_string_MainWindow_string_property_widget_class_QWidget_name_centralwidget_widget_class_QMenuBar_name_menubar_widget_class_QStatusBar_name_statusbar_widget_ui"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

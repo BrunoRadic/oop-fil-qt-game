@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/">
+        <file>ground_fire.png</file>
+        <file>pillar_3.png</file>
+        <file>smoke_background.png</file>
+        <file>DRACARYS.png</file>
+        <file>player_right.png</file>
+        <file>player_left.png</file>
+        <file>moving_right.png</file>
+        <file>moving_left.png</file>
+        <file>sparkly_sparkly.gif</file>
+        <file>finish.gif</file>
+    </qresource>
+</RCC>
