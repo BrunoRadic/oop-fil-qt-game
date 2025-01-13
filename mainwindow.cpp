@@ -143,19 +143,19 @@ void MainWindow::checkCollisions() {
         if (platform->checkCollision(playerRect, velocityX, velocityY)) {
             // top of a platform
             playerY = platform->pos().y() - playerHeight;
-            
+
             if (platform->getType() == Platform::MovingVertical) {
                 double platformVelocity = platform->getVerticalVelocity();
-                
+
 
                 if (!jumping) {
                     velocityY = platformVelocity;
                 }
-                
+
                 // allow jumping
                 canJump = true;
                 jumpCount = 0;
-                
+
                 // reset jumping state going down with the platform
                 if (velocityY >= 0 && !jumping) {
                     jumping = false;
@@ -166,7 +166,7 @@ void MainWindow::checkCollisions() {
                 canJump = true;
                 jumpCount = 0;
             }
-            
+
             onGround = true;
         }
     }
@@ -184,8 +184,7 @@ void MainWindow::checkCollisions() {
     }
 
     // finish line collision
-    QRectF finishRect = finishLine->boundingRect().translated(finishLine->pos());
-    if (playerRect.intersects(finishRect) && !levelCompleted) {
+    if (playerRect.intersects(finishLine->getHitbox()) && !levelCompleted) {
         levelCompleted = true;
         timer->stop();
         showLevelComplete();
@@ -277,7 +276,7 @@ void MainWindow::resetGame() {
     gameOver = false;
     levelCompleted = false;
 
-    // player position
+
     playerX = 20;
     playerY = 20;
     velocityX = 0;
@@ -288,10 +287,10 @@ void MainWindow::resetGame() {
     movingLeft = false;
     movingRight = false;
 
-    // recreate level
+
     createLevel();
 
-    // Recreate player
+
     player = new QGraphicsPixmapItem();
     player->setPos(playerX, playerY);
     scene->addItem(player);
@@ -457,7 +456,11 @@ void MainWindow::createLevel() {
     {2700, 450, 75, 350, Platform::Normal},
     {3150, 350, 50, 350, Platform::Normal},
     {3600, 350, 50, 350, Platform::Normal},
-    {4500, 300, 65, 350, Platform::Normal}
+    {4500, 300, 65, 350, Platform::Normal},
+    {4600, 350, 100, 350, Platform::Normal},
+    {4700, 350, 100, 350, Platform::Normal},
+    {4800, 350, 100, 350, Platform::Normal},
+    {4900, 350, 100, 350, Platform::Normal}
 };
 
 
@@ -489,20 +492,7 @@ for (const auto& data : flyingPlatforms) {
     platforms.append(platform);
 }
 
-
-
-QPixmap finishImage(":/finish.gif");
-if (finishImage.isNull()) {
-    qDebug() << "Failed to load finish line texture!";
-    finishImage = QPixmap(30, 100);
-    finishImage.fill(Qt::yellow);
-} else {
-    // scale
-    int newWidth = 100;
-    int newHeight = 200;
-    finishImage = finishImage.scaled(newWidth, newHeight, Qt::KeepAspectRatio, Qt::SmoothTransformation);
-}
-
+// finish line pos
 finishLine = new FinishLine(4850, 200);
 finishLine->setZValue(1);
 scene->addItem(finishLine);

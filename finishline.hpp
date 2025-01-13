@@ -10,9 +10,12 @@ public:
     FinishLine(qreal x, qreal y, QGraphicsItem* parent = nullptr);
     ~FinishLine();
 
+    QRectF getHitbox() const;
+
 private:
     QMovie* animation;
     void updateFrame();
+    QRectF hitbox;
 };
 
 #endif // FINISHLINE_HPP 
